@@ -17,40 +17,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri()?>/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri()?>/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri()?>/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_template_directory_uri()?>/images/favicons/manifest.json">
+    <link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/images/favicons/safari-pinned-tab.svg" color="#858585">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri()?>/images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="<?php echo get_template_directory_uri()?>/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bort' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+<header class="header">
+    <div class="container">
+        <div class="flex flex--a-center flex--j-between">
+            <div class="flex flex--a-center">
+                <a href="/#page-1" class="header__logo">
+                    <img src="<?php echo get_template_directory_uri()?>/images/logo.svg" alt="logo">
+                </a>
+                <nav id="site-navigation" class="main-navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="<?php echo get_template_directory_uri()?>/images/icon-menu.svg" alt=""></button>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bort' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+                    <div class="menu-main-container">
+                        <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"></li>
+                            <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="<?php echo get_page_link(13)?>">Услуги</a></li>
+                            <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#">Тарифы</a></li>
+                            <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="#">Наши водители</a></li>
 
-	<div id="content" class="site-content">
+                            <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#">Вакансии</a></li>
+                            <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#">Контакты</a></li>
+                        </ul>
+                        <button class="btn btn__submit-app btn__submit-app--m">Оставить заявку</button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="header__tel flex flex--a-center">
+               <span class="header__tel-image"></span>
+                <a href="tel:+74952333444">+7 495 233-34-44</a>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+

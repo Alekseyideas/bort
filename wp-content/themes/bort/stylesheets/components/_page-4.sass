@@ -1,0 +1,152 @@
+.page-4
+  background: #292a2e
+
+  &__slider
+    width: 100%
+    max-width: 1100px
+    box-sizing: border-box
+    margin-top: 60px
+    //margin-right: 52px
+    .owl-item
+      &:nth-child(2n)
+        margin-top: 150px
+      &:nth-child(2n+3)
+        margin-top: 70px
+      //&:nth-child(2n+5)
+        //margin-top: 0
+  &__person
+    &-image
+      width: 273px
+      height: auto
+      object-fit: contain
+      background-color: rgba(0, 0, 0, 0.5)
+      img
+        opacity: .8
+    &-name
+      font-size: 30px
+      color: white
+      margin-top: 50px
+      margin-left: 40px
+      position: relative
+      &:before
+        content: ''
+        display: block
+        height: 60px
+        width: 1px
+        position: absolute
+        top: -82px
+        background: white
+        left: 30px
+
+  .owl-prev,
+  .owl-next
+    position: absolute
+    top: 0
+    transition: .2s
+    &:hover
+      opacity: .5
+    &.disabled
+      display: none
+  .owl-prev
+    right: 300px
+  .owl-next
+    right: 120px
+  .owl-dots
+    position: absolute
+    top: 2px
+    right: 200px
+    .owl-dot
+      width: 6px
+      height: 6px
+      background: #4a4a4a
+      border-radius: 50%
+      margin-left: 10px
+      display: inline-block
+      opacity: .5
+      &.active
+        background: #fff
+
+@media only screen and (max-width : 1024px) and (min-height : 1000px)
+  .page-4
+    &__slider
+      max-width: 100%
+      margin-left: 30px !important
+@media only screen and (max-height : 840px)
+  .page-4
+    &__slider
+      max-width: 890px
+    &__person
+      &-image
+        width: 220px
+@media only screen and (max-height : 800px)
+  .page-4
+    &__slider
+      margin-top: 70px
+@media only screen and (max-height : 660px)
+  .page-4
+    &__slider
+      max-width: 800px
+    &__person
+      &-image
+        width: 200px
+      &-name
+        font-size: 20px
+
+
+@media only screen and (max-width : 1200px)
+  .page-4
+    .owl-dots
+      position: absolute
+      top: 40px
+@media only screen and (max-width : 1024px)
+  .page-4
+    .owl-dots
+      position: absolute
+      top: 100%
+      margin-top: 15px
+      left: 43%
+@media only screen and (max-width : 992px)
+  .page-4
+    padding: 40px 0
+    &__slider
+      margin-top: 50px
+      .owl-item
+        &:nth-child(2n)
+          margin-top: 0px
+        &:nth-child(2n+3)
+          margin-top: 0px
+    &__person-name
+      margin-left: 150px
+    &__person-image
+      margin: auto
+
+@media only screen and (max-width : 600px)
+  .page-4
+    .owl-dots
+      width: 100%
+      left: 0
+      text-align: center
+      margin-top: 10px
+    .title
+      margin-bottom: -30px
+    &__person-image
+      height: 260px
+      overflow: hidden
+      width: 100%
+    .face__desc
+      display: none !important
+
+    &__person-name
+      position: absolute
+      bottom: 30px
+      font-size: 20px
+      line-height: 25px
+      font-weight: normal
+      margin-left: 40px
+      left: 0
+      &:before
+        display: none
+
+@media only screen and (min-width : 600px)
+  .face__m
+     display: none!important

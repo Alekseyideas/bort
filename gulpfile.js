@@ -45,7 +45,7 @@ gulp.task('browser-sync', function() {
 	});
 // Компиляция stylesheet.css
 gulp.task('sass', function() {
-	return gulp.src('wp-content/themes/bort/stylesheets/stylesheet.sass')
+	return gulp.src('wp-content/themes/bort/stylesheets/**/*.sass')
 		.pipe(sass({
 			includePaths: bourbon.includePaths
 		}).on('error', sass.logError))

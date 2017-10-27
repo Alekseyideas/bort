@@ -1,0 +1,100 @@
+.header
+  position: fixed
+  z-index: 1
+  width: 100%
+  margin-top: 54px
+  &__logo
+    margin-right: 100px
+    width: 126px
+    min-width: 126px
+    transition: .2s
+    &:hover
+      opacity: .5
+  &__tel
+    width: 272px
+    text-align: right
+    &-image
+      width: 30px
+      height: 30px
+      margin-right: 10px
+      display: block
+      background: url("../images/shape.svg") no-repeat center / cover
+    a
+      font-size: 24px
+      color: white
+      &:hover
+        opacity: .7
+
+
+@media only screen and (max-width : 1360px)
+  .header
+    &__logo
+      margin-right: 52px
+@media only screen and (max-width : 1202px)
+  .header
+    &__logo
+      margin-right: 32px
+    &__tel
+      width: 245px
+@media only screen and (max-width : 992px)
+
+  .header
+    top: 0
+    margin-top: 0
+    background: #292a2e
+    padding: 20px 0
+    z-index: 10
+    &__tel
+      position: fixed
+      background: linear-gradient(146deg, #ffffff, #cecece)
+      bottom: 0
+      width: 100%
+      left: 0
+      justify-content: center
+      padding: 15px 0
+      color: black
+      font-weight: bold
+      z-index: 99
+      &-image
+        background: url("../images/shape-b.svg") no-repeat center / cover
+      a
+        color: black
+    #site-navigation
+      position: fixed
+      bottom: 0
+      background: #292a2e
+      width: 100%
+      max-width: 500px
+      overflow-y: scroll
+      right: -100%
+      display: block
+      transition: .5s
+      padding-bottom: 0
+      &.active
+        right: 0
+  #primary-menu
+    .menu-item
+      display: block
+      a
+        font-size: 30px
+        padding: 15px 20px
+        text-transform: inherit
+        &:after
+          display: none
+      &.active
+        a
+          &:after
+            display: block
+  .menu-toggle
+    position: fixed
+    right: 20px
+    top: 25px
+    background: none
+    border: 0
+    img
+      width: 30px
+      height: 16px
+
+@media only screen and (min-width : 992px)
+  .menu-toggle
+    display: none
