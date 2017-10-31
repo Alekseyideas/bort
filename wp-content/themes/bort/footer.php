@@ -31,6 +31,33 @@
     </div>
 
 
+
+    <div class="popUpForm">
+        <div class="container">
+            <div class="flex flex--j-between popUpLogoBtn">
+                <div class="popUplogo">
+                    <img src="<?php echo get_template_directory_uri()?>/images/logo.svg" alt="logo">
+                </div>
+                <div class="btn_close"><img src="<?php echo get_template_directory_uri()?>/images/close.svg" alt="close"></div>
+
+
+
+            </div>
+            <div class="page-5">
+                <h1 class="page-5__title">
+                    Станьте нашим водителем
+                </h1>
+
+		        <?php
+		        echo  do_shortcode('[contact-form-7 id="63" title="Оставить заявку" html_class="page-5__form"]');
+		        ?>
+            </div>
+        </div>
+
+
+
+    </div>
+
 <?php wp_footer(); ?>
 
 </body>

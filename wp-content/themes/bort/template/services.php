@@ -16,18 +16,17 @@ get_header(); ?>
 						<div class="page-2__left">
 							<div class="flex flex--a-top page-2__row">
 								<span><img src="<?php echo get_template_directory_uri()?>/images/page-2/shape-1.svg" alt="shape"></span>
-								<p>Аренда автомобиля с водителем
-									на любой срок</p>
+								<p><?php echo get_field("text-pol-1") ?></p>
 							</div>
 
 							<div class="flex flex--a-top page-2__row">
 								<span> <img src="<?php echo get_template_directory_uri()?>/images/page-2/shape-3.svg" alt="shape"></span>
-								<p>Трансферы, встречи, проводы в аэропортах и жд вокзалах</p>
+								<p><?php echo get_field("text-pol-2") ?></p>
 							</div>
 
 							<div class="flex flex--a-top page-2__row">
 								<span> <img src="<?php echo get_template_directory_uri()?>/images/page-2/vip.svg" alt="vip"></span>
-								<p>Корпоративные перевозки руководителей и сотруднико</p>
+								<p><?php echo get_field("text-pol-3") ?></p>
 							</div>
 
 						</div>
@@ -36,17 +35,17 @@ get_header(); ?>
 
 							<div class="flex flex--a-top page-2__row">
 								<span> <img src="<?php echo get_template_directory_uri()?>/images/page-2/combined-shape.svg" alt="shape"></span>
-								<p>Семейный водитель на длительный срок</p>
+								<p><?php echo get_field("r-text-pol-1") ?></p>
 							</div>
 
 							<div class="flex flex--a-top page-2__row">
 								<span><img src="<?php echo get_template_directory_uri()?>/images/page-2/group-3.svg" alt="group"></span>
-								<p>Услуга трезвый водитель</p>
+								<p><?php echo get_field("r-text-pol-2") ?></p>
 							</div>
 
 							<div class="flex flex--a-top page-2__row">
 								<span><img src="<?php echo get_template_directory_uri()?>/images/page-2/shape-2.svg" alt="shape"></span>
-								<p>Обслуживание мероприятий</p>
+								<p><?php echo get_field("r-text-pol-3") ?></p>
 							</div>
 
 						</div>

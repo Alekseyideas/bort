@@ -5,10 +5,14 @@ jQuery(document).ready(function($) {
     SiteLine();
 
 
-
-
+$('.btn__submit-app').click(function () {
+    $('.popUpForm').fadeIn(100);
+});
+$('.btn_close').click(function () {
+    $('.popUpForm').fadeOut(100);
+});
     function Page2() {
-        let padding =   $(window).width() > 767 ? 50 : 60;
+        let padding =   $(window).width() > 767 ? 0 : 160;
         $('.page-2').css({
             'min-height': $(window).height() - padding + 'px',
         });
