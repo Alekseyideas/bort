@@ -168,3 +168,82 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function add_option_field_to_general_admin_page(){
+	$option_name = 'my_option';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field(
+		'myprefix_setting-id',
+		'My custom options',
+		'myprefix_setting_callback_function',
+		'general',
+		'default',
+		array(
+			'id' => 'myprefix_setting-id',
+			'option_name' => 'my_option'
+		)
+	);
+}
+add_action('admin_menu', 'add_option_field_to_general_admin_page');
+
+function myprefix_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+
+	echo '<input type="text" name="' . $option_name .'" id="' . $id . '" value="' . esc_attr( get_option($option_name) ) . '" />';
+}
+
+function my_more_options(){
+	register_setting('general','my_phone_options');
+	register_setting('general','my_location_options');
+	register_setting('general','c-phone_options');
+	register_setting('general','my_email_options');
+
+
+	add_settings_field('phone','Номер телефона','display_phone','general');
+	add_settings_field('location','Расположение','display_location','general');
+	add_settings_field('tel2','Контактный телефон','display_c_phone','general');
+	add_settings_field('email2','Контактный email','display_email','general');
+
+
+
+};
+add_action('admin_init', 'my_more_options');
+
+
+function display_phone(){
+	echo "<input type='text' name='my_phone_options' class='regular-text' value='". esc_attr(get_option('my_phone_options')) . "'>";
+};
+
+function front_phone(){
+ $val = get_option('my_phone_options');
+	echo trim($val);
+}
+
+
+function display_location(){
+	echo "<textarea rows='10' cols='45' name='my_location_options' class='regular-text'>". esc_attr(get_option('my_location_options')) . "</textarea>";
+};
+function front_location(){
+	$val = get_option('my_location_options');
+	echo trim($val);
+}
+
+
+function display_email(){
+	echo "<input type='text' name='my_email_options' class='regular-text' value='". esc_attr(get_option('my_email_options')) . "'>";
+};
+function front_email(){
+	$val = get_option('my_email_options');
+	echo trim($val);
+}
+function display_c_phone(){
+	echo "<input type='text' name='c-phone_options' class='regular-text' value='". esc_attr(get_option('c-phone_options')) . "'>";
+};
+function front_c_phone(){
+	$val = get_option('c-phone_options');
+	echo trim($val);
+}

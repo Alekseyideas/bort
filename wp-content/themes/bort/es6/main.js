@@ -4,16 +4,21 @@ jQuery(document).ready(function($) {
     }
     SiteLine();
 
+
+
+
     function Page2() {
+        let padding =   $(window).width() > 767 ? 50 : 60;
         $('.page-2').css({
-            'min-height': $(window).height() + 'px',
+            'min-height': $(window).height() - padding + 'px',
         });
     }
 
-    $(window.width > 768) ? Page2() : false;
+
+    $(window).width() > 767 ? Page2() : false;
 
     $(window).resize(function () {
-        $(window.width > 768) ? Page2() : false;
+        $(window).width() > 767 ? Page2() : false;
         SiteLine();
     });
 
@@ -43,6 +48,15 @@ jQuery(document).ready(function($) {
                 'min-height': $(window).height() - $('header').height() - 97 +'px'
             });
 
+        }else{
+            $('#site-navigation').css({
+                'height': 'auto'
+            });
+
+
+            $('#primary-menu').css({
+                'min-height': 'auto'
+            });
         }
 
 
@@ -151,7 +165,7 @@ jQuery(document).ready(function($) {
     }
 
 
-    window.resize(function () {
+    $(window).resize(function () {
         if ($(window).width()<992){
             $('.page-3').attr('id','page-2');
             $('.page-4').attr('id','page-3');
@@ -267,6 +281,14 @@ $('.header__logo').click(function () {
                 'margin-left': $('#primary-menu').offset().left + 3
             })
 
+        }
+        else {
+            $('.page-1__title-btn,.page-3 .tabs').css({
+                'left': '0'
+            })
+            $('.page-4__slider').css({
+                'margin-left': '0'
+            })
         }
     }
     Marg();

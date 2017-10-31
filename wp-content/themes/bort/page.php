@@ -21,7 +21,7 @@ get_header(); ?>
                     <div class="container">
                         <div class="page-1__title-btn">
                             <h1 class="page-1__title">
-                                Премиальный сервис аренды автомобиля для деловых поездок и личных нужд
+	                            <?php echo get_bloginfo('description') ?>
                             </h1>
                             <button class="btn btn__submit-app btn__submit-app--d">Оставить заявку</button>
                         </div>
@@ -426,12 +426,14 @@ get_header(); ?>
                             Станьте нашим водителем
                         </h1>
 
-                        <form action="" class="page-5__form">
+                        <?php echo do_shortcode('[contact-form-7 id="16" title="Станьте нашим водителем" html_class="page-5__form"]')?>
+
+                        <!--<form action="" class="page-5__form">
                             <input type="text" class="page-5__input" placeholder="Как вас зовут?">
                             <input type="tel" class="page-5__input" placeholder="Телефон" >
                             <input type="email" class="page-5__input" placeholder="Электронная почта" >
                             <input type="button" class="page-5__submit" value="Отправить">
-                        </form>
+                        </form>-->
                     </div>
                     <!--<button class="btn btn__submit-app btn__submit-app--d btn__submit-app--absoluteRightBottom">Оставить заявку</button>-->
                 </section>
@@ -442,9 +444,13 @@ get_header(); ?>
                         </h1>
                         <div class="page-6__col">
 
-                            <h1 class="page-6__title">Куркинское шоссе стр 2 БЦ Аэросити</h1>
-                            <a href="tel:+74953692222" class="page-6__link">+7 (495) 369-22-22</a>
-                            <a href="mailto:" class="page-6__link">0-1-1@inbox.ru</a>
+                            <h1 class="page-6__title">
+
+	                            <?php  front_location() ?>
+
+                            </h1>
+                            <a href="tel:<?php  front_c_phone() ?>" class="page-6__link"><?php  front_c_phone() ?></a>
+                            <a href="mailto:<?php  front_email() ?>" class="page-6__link"><?php  front_email() ?></a>
                         </div>
 
 

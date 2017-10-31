@@ -43,24 +43,17 @@
                 <nav id="site-navigation" class="main-navigation">
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="<?php echo get_template_directory_uri()?>/images/icon-menu.svg" alt=""></button>
 
-                    <div class="menu-main-container">
-                        <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"></li>
-                            <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="<?php echo get_page_link(13)?>">Услуги</a></li>
-                            <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#">Тарифы</a></li>
-                            <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="#">Наши водители</a></li>
 
-                            <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#">Вакансии</a></li>
-                            <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#">Контакты</a></li>
-                        </ul>
-                        <button class="btn btn__submit-app btn__submit-app--m">Оставить заявку</button>
-                    </div>
+	                <?php wp_nav_menu( array(
+		                'menu_id'         => 'primary-menu',
+                    )); ?>
+
                 </nav>
             </div>
 
             <div class="header__tel flex flex--a-center">
                <span class="header__tel-image"></span>
-                <a href="tel:+74952333444">+7 495 233-34-44</a>
+                <a href="tel:<?php  front_phone() ?>"><?php  front_phone() ?></a>
             </div>
         </div>
 
