@@ -3,7 +3,7 @@
 
   &__slider
     width: 100%
-    max-width: 1100px
+    max-width: 1090px
     box-sizing: border-box
     margin-top: 60px
     //margin-right: 52px
@@ -75,7 +75,7 @@
 @media only screen and (max-height : 840px)
   .page-4
     &__slider
-      max-width: 890px
+      max-width: 888px
     &__person
       &-image
         width: 220px
@@ -83,6 +83,11 @@
   .page-4
     &__slider
       margin-top: 70px
+      .owl-item
+        &:nth-child(2n)
+          margin-top: 125px
+
+
 @media only screen and (max-height : 660px)
   .page-4
     &__slider

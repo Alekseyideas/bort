@@ -230,11 +230,14 @@ jQuery(document).ready(function ($) {
         if ($(window).width() > 992) {
             console.clear();
 
-            $('.page-1__title-btn,.page-3 .tabs').css({
-                'left': $('#primary-menu').offset().left
+            $('.page-1__title-btn').css({
+                'left': $('#primary-menu').offset().left + 1
+            });
+            $('.page-3 .tabs').css({
+                'left': $('#primary-menu').offset().left - 2
             });
             $('.page-4__slider').css({
-                'margin-left': $('#primary-menu').offset().left + 3
+                'margin-left': $('#primary-menu').offset().left
             });
         } else {
             $('.page-1__title-btn,.page-3 .tabs').css({

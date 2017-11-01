@@ -4,7 +4,7 @@
   width: 100%
   margin-top: 54px
   &__logo
-    margin-right: 100px
+    margin-right: 105px
     width: 126px
     min-width: 126px
     transition: .2s
@@ -89,12 +89,23 @@
     position: fixed
     right: 20px
     top: 25px
-    background: none
+    background: rgba(255, 255, 255, 0)
     border: 0
+    display: block
+    width: 30px
+    height: 16px
+    z-index: 228
+    -webkit-appearance: none
     img
       width: 30px
+      min-width: 30px
       height: 16px
+      min-height: 16px
+      display: block
 
+@media only screen and (min-width: 1200px ) and (max-height : 800px)
+  .header
+    margin-top: 25px
 @media only screen and (min-width : 992px)
   .menu-toggle
     display: none
